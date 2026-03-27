@@ -1,0 +1,315 @@
+/* src/app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Google Fonts ─────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ─── CSS Variables ─────────────────────────────── */
+:root {
+  /* ❄️ Ice Blue — هوية التبريد والتجميد الصناعي */
+  --ice-300: #7dd3fc;
+  --ice-400: #38bdf8;
+  --ice-500: #0ea5e9;
+  --ice-600: #0284c7;
+  --ice-700: #0369a1;
+  --ice-800: #075985;
+
+  /* 🌿 Emerald — للإبقاء على التوافق */
+  --emerald-400: #34d399;
+  --emerald-500: #10b981;
+  --emerald-600: #059669;
+  --emerald-700: #047857;
+  --emerald-800: #065f46;
+  --emerald-900: #064e3b;
+
+  /* 🧊 Teal accent */
+  --teal-400: #2dd4bf;
+  --teal-500: #14b8a6;
+
+  /* Dark backgrounds */
+  --dark-800: #1e293b;
+  --dark-900: #0f172a;
+  --dark-950: #020617;
+
+  --font-arabic:  'Cairo', system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-sans:    'DM Sans', system-ui, sans-serif;
+
+  --header-height: 72px;
+}
+
+/* ─── Base ──────────────────────────────────────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+html[lang="ar"] { direction: rtl; font-family: var(--font-arabic); }
+html[lang="en"] { direction: ltr; font-family: var(--font-sans); }
+
+body {
+  background-color: var(--dark-950);
+  color: #f1f5f9;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Selection ─────────────────────────────────── */
+::selection { background: var(--ice-700); color: #fff; }
+
+/* ─── Scrollbar ─────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark-950); }
+::-webkit-scrollbar-thumb { background: var(--ice-700); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ice-500); }
+
+/* ─── Focus ─────────────────────────────────────── */
+:focus-visible { outline: 2px solid var(--ice-500); outline-offset: 2px; }
+
+/* ─── Typography ────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; font-weight: 700; }
+html[lang="en"] h1, html[lang="en"] h2, html[lang="en"] h3 {
+  font-family: var(--font-display);
+}
+
+/* ─── Utility Classes ───────────────────────────── */
+@layer utilities {
+
+  /* ── Cold Gradient Text ── */
+  .text-gradient {
+    background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 50%, #2dd4bf 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Glass effects — ice toned ── */
+  .glass {
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(56, 189, 248, 0.12);
+  }
+  .glass-light {
+    background: rgba(30, 41, 59, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(56, 189, 248, 0.08);
+  }
+
+  /* ── Ice / Cold glow ── */
+  .emerald-glow {
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.2),
+                0 0 60px rgba(14, 165, 233, 0.07);
+  }
+  .emerald-glow-strong {
+    box-shadow: 0 0 40px rgba(14, 165, 233, 0.35),
+                0 0 80px rgba(14, 165, 233, 0.12);
+  }
+
+  /* ── Layout ── */
+  .section-padding { @apply py-20 md:py-28 lg:py-32; }
+  .container-wide  { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+
+  /* ── Grid background — ice dots ── */
+  .grid-bg {
+    background-image: linear-gradient(rgba(14,165,233,0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(14,165,233,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* ── Noise ── */
+  .noise { position: relative; }
+  .noise::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  /* ── Animation delays ── */
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+  .animate-delay-600 { animation-delay: 600ms; }
+  .animate-delay-700 { animation-delay: 700ms; }
+  .animate-delay-800 { animation-delay: 800ms; }
+  .opacity-0-init { opacity: 0; }
+}
+
+/* ─── Component Classes ─────────────────────────── */
+@layer components {
+
+  /* ── Primary Button — Ice Blue ── */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm
+           text-white
+           transition-all duration-300
+           hover:-translate-y-0.5 active:translate-y-0
+           active:scale-[0.98];
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    box-shadow: 0 4px 18px rgba(14, 165, 233, 0.3);
+  }
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    box-shadow: 0 8px 28px rgba(14, 165, 233, 0.5),
+                0 0 0 1px rgba(56, 189, 248, 0.3);
+  }
+
+  /* ── Outline Button — Ice ── */
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm
+           transition-all duration-300
+           hover:-translate-y-0.5 active:translate-y-0;
+    border: 1px solid rgba(14, 165, 233, 0.35);
+    color: #38bdf8;
+    background: transparent;
+  }
+  .btn-outline:hover {
+    border-color: rgba(56, 189, 248, 0.6);
+    background: rgba(14, 165, 233, 0.08);
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.15);
+    color: #7dd3fc;
+  }
+
+  /* ── Ghost Button ── */
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl font-medium text-sm
+           transition-all duration-200;
+    color: #94a3b8;
+  }
+  .btn-ghost:hover {
+    color: #38bdf8;
+    background: rgba(14, 165, 233, 0.06);
+  }
+
+  /* ── Card ── */
+  .card {
+    @apply rounded-2xl border transition-all duration-300;
+    background: rgba(15, 23, 42, 0.7);
+    border-color: rgba(30, 41, 59, 1);
+  }
+  .card:hover { border-color: rgba(14, 165, 233, 0.25); }
+
+  .card-hover {
+    @apply hover:-translate-y-1;
+    transition: all 0.3s ease;
+  }
+  .card-hover:hover {
+    box-shadow: 0 20px 40px rgba(14, 165, 233, 0.08),
+                0 0 0 1px rgba(14, 165, 233, 0.1);
+  }
+
+  /* ── Badge / Section badge ── */
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold;
+    background: rgba(14, 165, 233, 0.1);
+    color: #38bdf8;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+  }
+  .section-badge {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold
+           tracking-widest uppercase mb-4;
+    background: rgba(14, 165, 233, 0.08);
+    color: #38bdf8;
+    border: 1px solid rgba(14, 165, 233, 0.18);
+  }
+
+  /* ── Input field ── */
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border
+           text-dark-100 placeholder-dark-500
+           focus:outline-none focus:ring-2
+           transition-all duration-200;
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(51, 65, 85, 1);
+  }
+  .input-field:focus {
+    border-color: rgba(14, 165, 233, 0.5);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.08);
+  }
+
+  /* ── Divider ── */
+  .divider-emerald {
+    @apply w-12 h-1 rounded-full;
+    background: linear-gradient(90deg, #0ea5e9, #2dd4bf);
+  }
+}
+
+/* ─── Orbs ──────────────────────────────────────── */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+.orb-emerald {
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.22) 0%, transparent 70%);
+}
+.orb-dark {
+  background: radial-gradient(circle, rgba(3, 105, 161, 0.15) 0%, transparent 70%);
+}
+
+/* ─── Page transition ───────────────────────────── */
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.page-enter { animation: pageIn 0.5s ease-out forwards; }
+
+/* ─── Tailwind animations ───────────────────────── */
+@keyframes fadeIn    { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp   { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes float     { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+@keyframes pulseGlow {
+  0%,100% { box-shadow: 0 0 20px rgba(14,165,233,0.2); }
+  50%     { box-shadow: 0 0 40px rgba(14,165,233,0.45), 0 0 70px rgba(14,165,233,0.15); }
+}
+@keyframes iceCrystal {
+  0%   { transform: rotate(0deg)   scale(1); opacity: 0.15; }
+  50%  { transform: rotate(180deg) scale(1.1); opacity: 0.25; }
+  100% { transform: rotate(360deg) scale(1); opacity: 0.15; }
+}
+@keyframes frostedPulse {
+  0%,100% { opacity: 0.08; }
+  50%     { opacity: 0.18; }
+}
+
+/* ─── Snowflake decorative spin ─────────────────── */
+.snowflake-spin { animation: iceCrystal 12s linear infinite; }
+.frost-pulse    { animation: frostedPulse 4s ease-in-out infinite; }
+.pulse-glow     { animation: pulseGlow 3s ease-in-out infinite; }
+
+/* ─── Navbar active link underline ─────────────── */
+.nav-active {
+  position: relative;
+}
+.nav-active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0; right: 0;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #0ea5e9, #2dd4bf);
+}
+
+/* ─── RTL Adjustments ───────────────────────────── */
+[dir="rtl"] .flip-rtl { transform: scaleX(-1); }
+
+/* ─── Emerald overrides → ice (keeps existing classes working) ── */
+/* Tailwind emerald utility overrides via CSS vars so .text-emerald-400 etc. stay valid */
+/* We remap the accent feel via component classes above, not breaking tailwind tokens */

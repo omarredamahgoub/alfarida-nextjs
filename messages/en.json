@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "siteName": "Alfarida Company",
+    "siteDescription": "Leading construction and contracting company in Eastern Province, Saudi Arabia. Building the future with unmatched quality.",
+    "ogImageAlt": "Alfarida Company — Construction & Contracting"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "about": "About Us",
+    "contact": "Contact",
+    "getQuote": "Get a Quote"
+  },
+  "home": {
+    "hero": {
+      "badge": "Est. 2005 · Eastern Province, KSA",
+      "headline": "Building the Future with Unmatched Quality",
+      "subheadline": "Alfarida Company delivers premium construction, infrastructure, and contracting solutions across Saudi Arabia.",
+      "cta": "Explore Our Projects",
+      "secondaryCta": "Our Services"
+    },
+    "stats": {
+      "years": "Years of Experience",
+      "projects": "Completed Projects",
+      "clients": "Satisfied Clients",
+      "employees": "Professional Team"
+    },
+    "about": {
+      "badge": "Who We Are",
+      "title": "A Legacy of Excellence in Construction",
+      "body": "Since 2005, Alfarida Company has been a cornerstone of development in the Eastern Province. We combine deep local expertise with world-class engineering standards to deliver projects that stand the test of time.",
+      "cta": "Learn More About Us"
+    },
+    "services": {
+      "badge": "What We Do",
+      "title": "Comprehensive Construction Services",
+      "subtitle": "From foundation to finishing, we handle every aspect of your project with precision and care."
+    },
+    "projects": {
+      "badge": "Our Portfolio",
+      "title": "Featured Projects",
+      "subtitle": "A selection of landmark developments that showcase our capabilities.",
+      "viewAll": "View All Projects"
+    },
+    "contact": {
+      "badge": "Get In Touch",
+      "title": "Ready to Start Your Project?",
+      "subtitle": "Contact our team today for a consultation and free quote.",
+      "cta": "Contact Us Now"
+    }
+  },
+  "services": {
+    "meta": {
+      "title": "Our Services — Alfarida Company",
+      "description": "Comprehensive construction and contracting services: General Contracting, Infrastructure, Interior Design, and Industrial Projects."
+    },
+    "hero": {
+      "badge": "Our Services",
+      "title": "Comprehensive Construction Solutions",
+      "subtitle": "From initial planning to final handover, our expert teams deliver excellence across all construction disciplines."
+    },
+    "whyUs": {
+      "title": "Why Choose Alfarida?",
+      "items": [
+        { "title": "20+ Years Experience", "desc": "Two decades of delivering landmark projects across the Kingdom." },
+        { "title": "Certified Engineers", "desc": "A team of Saudi Engineers Council–certified professionals." },
+        { "title": "ISO Standards", "desc": "All projects executed to ISO 9001 quality management standards." },
+        { "title": "On-Time Delivery", "desc": "98% of our projects delivered on schedule and within budget." }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Discuss Your Project?",
+      "subtitle": "Our team is standing by to provide expert advice and a detailed quotation.",
+      "button": "Request a Quote"
+    }
+  },
+  "projects": {
+    "meta": {
+      "title": "Projects — Alfarida Company",
+      "description": "Browse our portfolio of completed construction, infrastructure, and development projects across Saudi Arabia."
+    },
+    "hero": {
+      "badge": "Our Portfolio",
+      "title": "Projects That Define Excellence",
+      "subtitle": "Explore our diverse portfolio spanning commercial, residential, industrial, and infrastructure developments."
+    },
+    "filters": {
+      "all": "All",
+      "commercial": "Commercial",
+      "residential": "Residential",
+      "industrial": "Industrial",
+      "infrastructure": "Infrastructure",
+      "interior": "Interior Design",
+      "construction": "Construction"
+    },
+    "card": {
+      "client": "Client",
+      "location": "Location",
+      "completed": "Completed",
+      "viewDetails": "View Details"
+    },
+    "empty": "No projects found in this category."
+  },
+  "contact": {
+    "hero": {
+      "badge": "Contact Us",
+      "title": "Get a Free",
+      "titleHighlight": "Consultation",
+      "subtitle": "Our engineering team will respond to your request within 24 hours with a detailed quote."
+    },
+    "sidebar": {
+      "title": "Why",
+      "titleHighlight": "\"Alfarida Ice\"",
+      "titleSuffix": "?",
+      "features": [
+        { "title": "24/7 Technical Support", "desc": "Dedicated hotline for emergencies to ensure the safety of your inventory." },
+        { "title": "Energy-Saving Solutions", "desc": "Smart technologies that reduce electricity consumption by up to 30% annually." },
+        { "title": "Integrated Technical System", "desc": "Specialized departments (panel, control, mechanical) managed with engineering expertise." },
+        { "title": "Certified Gold Warranty", "desc": "Original spare parts with a genuine warranty covering all components." },
+        { "title": "Free Engineering Consultations", "desc": "We design the best solution for your budget and technical needs." },
+        { "title": "We Serve You Anywhere", "desc": "Our technical fleet covers all cities in the Kingdom to ensure fast response." }
+      ],
+      "stat1Label": "Projects Completed",
+      "stat2Label": "Years of Experience",
+      "whatsappBtn": "Contact the Technical Office Now"
+    },
+    "form": {
+      "title": "Request a Quote",
+      "subtitle": "Fill in the details and we will respond within 24 hours",
+      "section1Title": "Basic Information",
+      "section2Title": "Technical Specifications",
+      "namePlaceholder": "Enter your name",
+      "nameLabel": "Name or Company *",
+      "phoneLabel": "Phone Number *",
+      "phonePlaceholder": "+9665xxxxxxxx",
+      "phoneTitle": "Phone number must be 10-15 digits and may start with +",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "example@mail.com",
+      "cityLabel": "City *",
+      "cityPlaceholder": "Select a city",
+      "dimensionsLabel": "Room Dimensions (meters)",
+      "lengthLabel": "Length",
+      "widthLabel": "Width",
+      "heightLabel": "Height",
+      "areaLabel": "Area",
+      "volumeLabel": "Volume",
+      "activityLabel": "Activity Type",
+      "activity1": "Freezing (-18° to -25°)",
+      "activity2": "Cooling (+2° to +8°)",
+      "activity3": "Blast Freezing (IQF)",
+      "floorLabel": "Floor Insulation",
+      "floor1": "No insulation (concrete)",
+      "floor2": "Yes (panel insulation)",
+      "doorSectionLabel": "Door Specifications",
+      "doorTypeLabel": "Door Type",
+      "doorType1": "Hinged",
+      "doorType2": "Sliding",
+      "doorWidthLabel": "Door Width (m)",
+      "doorHeightLabel": "Door Height (m)",
+      "notesPlaceholder": "Additional details...",
+      "agreeLabel": "I agree to be contacted by your engineers",
+      "submitBtn": "Submit Quote Request",
+      "submitting": "Sending...",
+      "errorMsg": "An error occurred, please try again.",
+      "successTitle": "Your request has been sent successfully!",
+      "successSubtitle": "Our engineering team will contact you within 24 hours.",
+      "refLabel": "Your Reference Number",
+      "sendAnother": "Send Another Request",
+      "outsideKSA": "Outside Saudi Arabia",
+      "outsideKSALabel": "Outside KSA"
+    }
+  },
+  "footer": {
+    "description": "Alfarida Company — Leading construction and contracting firm in Eastern Province, Saudi Arabia.",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved.",
+    "cr": "CR No.",
+    "vat": "VAT No."
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "projects": "Projects",
+    "inquiries": "Inquiries",
+    "services": "Services",
+    "settings": "Settings",
+    "logout": "Log Out",
+    "welcome": "Welcome back",
+    "stats": {
+      "totalProjects": "Total Projects",
+      "totalInquiries": "Total Inquiries",
+      "newInquiries": "New Inquiries",
+      "publishedProjects": "Published Projects"
+    }
+  }
+}
